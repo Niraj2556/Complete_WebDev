@@ -1,0 +1,1 @@
+// UMD: UMD is a hybrid module format that aims to work in both CommonJS and AMD environments. It attempts to detect the available module system and adapts accordingly.

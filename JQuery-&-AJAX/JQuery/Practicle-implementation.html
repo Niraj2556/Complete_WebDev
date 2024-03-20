@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery DOM Manipulation Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    
+    $(document).ready(function() {
+  // Selecting elements and modifying their content
+
+  // Change the text inside the <h1> element
+  $('h1').text('Updated Heading by JQuery');
+
+  // Change the text inside the first <li> element
+  $('li:first').text('Updated Item 1');
+
+  // Add a CSS class to the <div> element
+  $('#content').addClass('highlight');
+
+  // Adding a new element dynamically
+
+  // Attach a click event handler to the "Change Text" button
+  $('#changeTextBtn').click(function() {
+    $('p').text('Text has been changed!');
+  });
+
+
+  $('#forHeading').click(function(){
+    $('h1:first').text("Heading is Changed");
+  })
+
+  // Attach a click event handler to the "Add New Element" button
+  $('#addNewElementBtn').click(function() {
+    // Create a new <li> element with some text
+    var newElement = $('<li>New Item</li>');
+
+    // Append the new element to the <ul> element
+    $('ul').append(newElement);
+  });
+});
+  </script>
+</head>
+
+<body>
+  <h1>Welcome to jQuery DOM Manipulation Example</h1>
+  <div id="content">
+    <p>This is some text inside a paragraph.</p>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+  </div>
+  <button id="changeTextBtn">Change Text</button>
+  <button id="addNewElementBtn">Add New Element</button>
+  <button id= "forHeading">Change the Heading</button>
+</body>
+
+</html>

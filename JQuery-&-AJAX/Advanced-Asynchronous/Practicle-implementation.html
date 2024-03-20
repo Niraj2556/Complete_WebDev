@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Callback Functions, Promises, and Chaining Promises Example</title>
+</head>
+<body>
+  <h1>Callback Functions, Promises, and Chaining Promises Example</h1>
+  
+  <button id="btn">Click Me</button>
+  
+  <script>
+    // Callback Function
+    function fetchData(callback) {
+      setTimeout(() => {
+        const data = 'Hello, World!';
+        callback(null, data); // Pass error as the first argument if applicable
+      }, 2000);
+    }
+    
+
+    // Promise-based Function
+    function fetchDataPromise() {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          const data = 'Hello, Promise!';
+          resolve(data); // Resolve the promise with the data
+          // If there's an error, reject the promise with an error object: reject(new Error('Error message'));
+        }, 2000);
+      });
+    }
+    
+    // Chaining Promises
+    function processResult(data) {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          const processedData = data.toUpperCase();
+          resolve(processedData);
+        }, 2000);
+      });
+    }
+    
+    // Event Listener with Callback Function
+    document.getElementById('btn').addEventListener('click', function() {
+      fetchData(function(error, data) {
+        if (error) {
+          console.log('Error:', error);
+        } else {
+          console.log('Callback Data:', data);
+        }
+      });
+    });
+    
+    // Event Listener with Promises
+    document.getElementById('btn').addEventListener('click', function() {
+      fetchDataPromise()
+        .then(function(data) {
+          console.log('Promise Data:', data);
+          return processResult(data);
+        })
+        .then(function(processedData) {
+          console.log('Processed Data:', processedData);
+        })
+        .catch(function(error) {
+          console.log('Promise Error:', error);
+        });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+Working with Classes
+Working with classes in the DOM (Document Object Model) involves manipulating and interacting with the CSS classes of HTML elements. This can include adding, removing, or toggling classes, as well as checking if an element has a specific class. Here are some common methods and techniques for working with classes in the DOM:
+
+classList: The classList property of an element provides methods to add, remove, toggle, and check classes.
+
+add(): Adds one or more classes to an element.
+var element = document.getElementById("myElement");
+<!-- element.classList.add("newClass"); -->
+
+
+remove(): Removes one or more classes from an element.
+<!-- element.classList.remove("oldClass"); -->
+
+
+toggle(): Toggles a class on or off based on its presence.
+<!-- element.classList.toggle("active"); -->
+
+
+
+contains(): Checks if an element has a specific class.
+<!-- if (element.classList.contains("myClass")) {
+    // Do something
+} -->
+
+
+
+className: The className property of an element allows you to get or set the value of the element's class attribute. However, using className directly replaces the entire class attribute, so it's less flexible than classList.
+
+
+Get the class name:
+<!-- var element = document.getElementById("myElement");
+var className = element.className;
+Set the class name:
+element.className = "newClass"; -->

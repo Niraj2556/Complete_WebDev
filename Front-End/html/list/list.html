@@ -1,0 +1,73 @@
+Lists in HTML
+
+Ordered Lists (<ol>): An ordered list is used when you want to display a list of items in a specific order or sequence. Each item in the list is represented by an <li> (list item) element.
+
+The type attribute of the <ol> element in HTML allows you to specify the numbering style for an ordered list.  If the type attribute is not specified in the <ol> element in HTML, the default numbering style will be used, which is decimal numbers (type="1").
+    
+<!-- Here are the possible values for the type attribute:
+type="1": This is the default value and represents decimal numbers (1, 2, 3...).
+type="A": Uppercase Latin letters (A, B, C...).
+type="a": Lowercase Latin letters (a, b, c...).
+type="I": Uppercase Roman numerals (I, II, III...).
+type="i": Lowercase Roman numerals (i, ii, iii...).
+type="1" with start="X": Starts the numbering at a specific number. Replace X with the desired starting number.
+type="A" with start="X": Starts the uppercase lettering at a specific letter. Replace X with the desired starting letter.
+type="a" with start="X": Starts the lowercase lettering at a specific letter. Replace X with the desired starting letter.
+These options provide flexibility in choosing the numbering or lettering style for your ordered lists. -->
+Example:
+<!-- When type of ordered list is not specified -->
+<ol>
+  <li>Item 1</li>
+  <li>Item 2</li>
+	<li>Item 3</li>
+</ol>
+
+<!-- When type of ordered list is specified -->
+<ol type="I">
+  <li>First item</li>
+  <li>Second item</li>
+  <li>Third item</li>
+</ol>
+Unordered Lists (<ul>): An unordered list is used when the order of the items is not important. Each item in the list is represented by an <li> element, and the items are typically displayed with bullet points.
+Example:
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+	<li>Item 3</li>
+</ul>
+
+
+Definition Lists (<dl>): A definition list is used to present a list of terms and their corresponding definitions. It consists of <dt> (definition term) elements, which represent the terms, and <dd> (definition description) elements, which represent the definitions.
+<dfn>: In HTML lists, the <dfn> element is used to define and highlight the definition or the term being defined within a list. It stands for "definition" and is typically used within <li> elements in a definition list (<dl>).
+Example:
+<!-- Without using dfn element -->
+<dl>
+  <dt>First Term</dt>
+  <dd>Description...</dd>
+  <dt>Second Term</dt>
+  <dd>Description...</dd>
+</dl>
+
+<!-- With dfn element -->
+<dl>
+  <dt><dfn>First Term</dfn></dt>
+  <dd>Description...</dd>
+  <dt><dfn>Second Term</dfn></dt>
+  <dd>Description...</dd>
+</dl>
+Nested Lists: HTML allows you to nest lists within other lists to create hierarchical structures. This means you can have lists inside <li> elements.
+Example:
+<ul>
+  <li>Route 1
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+    </ul>
+  </li>
+  <li>Route 2
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+    </ul>
+  </li>
+</ul>

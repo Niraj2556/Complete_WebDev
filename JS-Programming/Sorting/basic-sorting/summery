@@ -1,0 +1,23 @@
+# Bubble Sort is a simple sorting algorithm that repeatedly compares adjacent elements and swaps them if they are in the wrong order until the list is sorted.
+
+# The time complexity of bubble sort is O(n^2) and space complexity is O(1).
+
+# Selection sort is a simple sorting algorithm that works by selecting the smallest element and swapping it with the first element of the unsorted array.
+
+# The time complexity of selection sort is O(n^2), which makes it inefficient for large data sets.
+
+# Selection sort is stable and adaptable to various data types. It is also an in-place sorting algorithm, which means it has O(1) space complexity.
+
+# Insertion Sort is a simple sorting algorithm that works by repeatedly inserting an element from an unsorted list into its correct position in a sorted list.
+
+# It maintains two subarrays in a given array: Sorted Subarray and Unsorted Subarray.
+
+# The time complexity of Insertion sort is O(n^2) in average and worst cases, and O(n) in the best case, while its space complexity is O(1).
+
+# Merge sort is a divide-and-conquer algorithm that recursively divides an array into halves until it reaches atomic values, sorts each half, and then merges them back together.
+
+# The algorithm has a time complexity of O(n log n) and a space complexity of O(n).
+
+# Quick Sort is a sorting algorithm that uses a divide-and-conquer approach to sort an array of elements.
+
+# Quick Sort has an average time complexity of O(n log n), making it a relatively fast sorting algorithm for large data sets. The worst-case time complexity of quick sort is O(n^2).

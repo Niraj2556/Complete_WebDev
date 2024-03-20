@@ -1,0 +1,19 @@
+AJAX (Asynchronous JavaScript and XML) is a technique used in web development to send and receive data from a server asynchronously, without requiring the page to be refreshed. It enables dynamic and interactive web applications by allowing the exchange of data between the web browser and the server in the background.
+
+Here are the key components and concepts related to AJAX:
+
+
+Asynchronous: AJAX enables asynchronous communication, meaning that the web browser can send requests to the server and continue executing other tasks without waiting for a response. When the server sends back a response, the browser can handle it without interrupting the user's interaction with the web page.
+
+
+JavaScript: AJAX relies heavily on JavaScript to handle the communication between the browser and the server. JavaScript code is responsible for making the AJAX requests, processing the server's response, and updating the web page dynamically.
+XML (and other data formats): Although the name implies XML, AJAX can work with various data formats, including JSON (JavaScript Object Notation), HTML, plain text, and more. These formats are used to structure and represent the data being exchanged between the client and the server.
+
+
+XMLHttpRequest (XHR) Object: The XMLHttpRequest object is a core component of AJAX. It provides the functionality to send HTTP requests to the server and handle the server's response. With the help of the XHR object, JavaScript code can make asynchronous requests, receive data, and update the web page accordingly.
+
+
+Callbacks and Event Handling: AJAX utilizes callbacks and event handling to handle the response from the server. Callback functions are executed when a response is received, allowing developers to process the data and update the user interface accordingly. Events like "onreadystatechange" and "onload" are used to trigger these callbacks.
+
+
+Same-Origin Policy and Cross-Origin Resource Sharing (CORS): Due to security restrictions, AJAX requests are subject to the same-origin policy, which means that requests can only be made to the same domain from which the web page originated. Cross-Origin Resource Sharing (CORS) is a mechanism that allows servers to specify which domains are allowed to make AJAX requests to them.

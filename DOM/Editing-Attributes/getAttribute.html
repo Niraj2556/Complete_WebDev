@@ -1,0 +1,24 @@
+getAttribute()
+The getAttribute() method is invoked on an HTML element (element) and takes a single parameter (attributeName) that specifies the name of the attribute you want to retrieve. It allows you to access any attribute of an element, whether it is a standard attribute defined by HTML or a custom attribute.  When called, getAttribute() returns the value of the specified attribute as a string. If the attribute doesn't exist on the element, it returns null.
+The syntax for getAttribute() is as follows:
+<!-- element.getAttribute(attributeName); -->
+
+Let's consider an HTML element with an attribute named data-id:
+<!-- <div id="myElement" data-id="123">Hello, World!</div> -->
+
+You can use getAttribute() to retrieve the value of the data-id attribute:
+<!-- var element = document.getElementById('myElement');
+var attributeValue = element.getAttribute('data-id'); -->
+<!-- console.log(attributeValue);  // Output: 123 -->
+
+Custom Attributes: getAttribute() can also retrieve the value of custom attributes that are not part of the standard HTML attributes. Custom attributes are prefixed with data- by convention to comply with HTML5 standards.
+For example, let's consider a custom attribute named data-custom:
+
+<!-- <div id="myElement" data-custom="example">Hello, World!</div> -->
+
+Using getAttribute(), you can retrieve the value of the custom attribute:
+<!-- var element = document.getElementById('myElement');
+var attributeValue = element.getAttribute('data-custom');
+console.log(attributeValue);  // Output: example -->
+ 
+The getAttribute() method is useful when you need to access specific attribute values on HTML elements dynamically. It allows you to retrieve both standard and custom attribute values and is commonly used for tasks such as data retrieval, configuration, or dynamic element manipulation in JavaScript.

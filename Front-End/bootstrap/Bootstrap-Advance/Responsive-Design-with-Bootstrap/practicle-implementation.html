@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reserve Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar bg-body-secondary shadow">
+        <div class="container-fluid">
+          <div class="navbar-nav d-flex flex-row align-items-center">
+            <a class="navbar-brand fs-4 fw-medium" href="./index.html">
+              <img src="../assets/bus.png" alt="Bus" height="50" />
+              Reserve
+            </a>
+            <a class="nav-link p-2 disabled">Tickets</a>
+            <a class="nav-link p-2" href="./route.html">Bus Routes</a>
+            <a class="nav-link p-2 active" href="./contactus.html">Contact Us</a>
+          </div>
+
+          <div class="navbar-nav d-flex flex-row justify-content-end align-items-center">
+            <button type="button" class="btn btn-warning fw-bold">Login</button>
+            <button type="button" class="btn fw-bold">Register</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="p-5">
+      <h1 class="text-center text-warning pb-5">Contact Us</h1>
+
+      <!--     Here's the form element where responsiveness has been applied.     -->
+      <form class="col-xxl-4 offset-xxl-4 col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-8 offset-md-2">
+        <div class="form-group py-1">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name" name="name" required />
+        </div>
+        <div class="form-group py-1">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" name="email" required />
+        </div>
+        <div class="form-group py-1">
+          <label for="mobile">Mobile Number:</label>
+          <input type="tel" class="form-control" id="mobile" name="mobile" pattern="[0-9]{10}" required />
+          <small class="form-text text-muted">Please enter a 10-digit mobile number.</small>
+        </div>
+        <div class="form-group py-1">
+          <label>Gender:</label>
+          <div class="form-check form-check-inline">
+            <input type="radio" class="form-check-input" id="genderMale" name="gender" value="male" required />
+            <label class="form-check-label" for="genderMale">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input type="radio" class="form-check-input" id="genderFemale" name="gender" value="female" required />
+            <label class="form-check-label" for="genderFemale">Female</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input type="radio" class="form-check-input" id="nts" name="gender" value="nts" required />
+            <label class="form-check-label" for="nts">Prefer not to say</label>
+          </div>
+        </div>
+        <div class="form-group py-1">
+          <label for="message">Message:</label>
+          <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+        </div>
+        <div class="form-group py-1">
+          <label for="image">Upload Image:</label>
+          <input type="file" class="form-control-file" id="image" name="image" />
+        </div>
+        <div class="form-check py-1">
+          <input type="checkbox" class="form-check-input" id="newsletter" name="newsletter" />
+          <label class="form-check-label" for="newsletter">Subscribe to Newsletter</label>
+        </div>
+        <div class="d-flex justify-content-center my-3">
+          <button type="submit" class="btn btn-primary col-12">Submit</button>
+        </div>
+      </form>
+    </main>
+
+    <footer class="d-flex justify-content-between pt-3 bg-secondary align-content-between">
+      <p class="fw-bold ps-2">© 2023 AlmaBetter. All rights reserved</p>
+      <div class="d-flex">
+        <p class="fw-bold">Follow Us:</p>
+        <a href="https://www.facebook.com" class="px-2">
+          <img src="../assets/facebook.png" alt="Facebook" width="24px" /></a>
+        <a href="https://www.twitter.com" class="px-2">
+          <img src="../assets/twitter.png" alt="Twitter" width="24px" /></a>
+        <a href="https://www.instagram.com" class="px-2">
+          <img src="../assets/instagram.png" alt="Instagram" width="24px" /></a>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+
+</html>
+
+
+
+<!-- Explaination -->
+
+<!--
+col-xxl-4: This class specifies that the form should occupy 4 columns on extra-extra-large (xxl) screens. The xxl breakpoint is typically used for very large screens, such as desktops with high resolutions.
+offset-xxl-4: The offset-xxl-4 class adds a margin to the left of the form, pushing it 4 columns to the right. This creates empty space before the form.
+col-xl-6: This class indicates that the form should span 6 columns on extra-large (xl) screens. The xl breakpoint is often used for large desktop screens.
+offset-xl-3: Similar to the previous offset class, offset-xl-3 adds a margin to the left of the form, pushing it 3 columns to the right on extra-large screens.
+col-lg-8: This class specifies that the form should occupy 8 columns on large (lg) screens. The lg breakpoint is typically used for medium-sized desktop screens.
+offset-lg-2: Once again, offset-lg-2 adds a margin to the left, pushing the form 2 columns to the right on large screens.
+col-md-8: This class indicates that the form should span 8 columns on medium (md) screens. The md breakpoint is often used for tablets or smaller desktop screens.
+offset-md-2: The offset-md-2 class adds a margin to the left, pushing the form 2 columns to the right on medium screens. -->

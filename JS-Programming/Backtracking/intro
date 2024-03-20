@@ -1,0 +1,9 @@
+<!-- Introduction to Backtracking
+One way to understand backtracking is to think about it using a real-life analogy. Imagine that you are trying to solve a Maze. 
+You might start at the entrance and try to find the exit, but you don't know the correct path. So you start trying different paths, going left or right at each intersection, and recording what you have tried. Eventually, you might reach a dead end without a clear path forward. At this point, you have to backtrack to the last intersection and try a different path. Trying different paths and backtracking when you reach a dead end is similar to how backtracking works in computer algorithms.
+notion image
+
+
+
+Backtracking is a problem-solving algorithmic technique that is often used to solve problems that involve finding all possible solutions to a problem. This technique is commonly used in programming languages such as JavaScript.
+In JavaScript, backtracking can be implemented using recursion. The algorithm is defined as a function that inputs the problem's current state and returns the solution if one is found. If a solution is not found, the function continues to recursively call itself, trying different options at each step until a solution is found or all options have been exhausted. -->

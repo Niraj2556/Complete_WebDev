@@ -1,0 +1,13 @@
+<!-- To achieve responsiveness in Tailwind CSS, you can use responsive breakpoints, which are predefined screen sizes. The default breakpoints in Tailwind CSS are:
+
+sm: Small screens (640px and up)
+
+md: Medium screens (768px and up)
+
+lg: Large screens (1024px and up)
+
+xl: Extra-large screens (1280px and up)
+
+2xl: Extra-extra-large screens (1536px and up)
+
+To apply styles based on these breakpoints, you can use the responsive utility classes provided by Tailwind CSS. These classes allow you to specify different styles for different screen sizes -->

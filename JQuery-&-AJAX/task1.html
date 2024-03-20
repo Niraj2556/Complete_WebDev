@@ -1,0 +1,91 @@
+Task 1: Challenge yourself with hands-on jQuery and Ajax problem-solving using the VS Code IDE – your coding playground awaits!
+Problem
+Setup:
+Create a new HTML file with the necessary structure, including <head> and <body> tags.
+Include the jQuery library in the <head> section of your HTML file using a CDN link.
+Add a <div> element with an id attribute of "news-feed" in the <body> section of your HTML file. This div will serve as the container for displaying news items.
+
+
+    Fetch Data Using AJAX:
+Create a JSON file named "news_data.json" with a list of news items. Each news item should have properties like "title" and "description”.
+[
+    {
+      "title": "News Item 1",
+      "description": "This is the description of News Item 1."
+    },
+    {
+      "title": "News Item 2",
+      "description": "This is the description of News Item 2."
+    },
+    {
+      "title": "News Item 3",
+      "description": "This is the description of News Item 3."
+    }
+  ]
+
+
+Use jQuery's AJAX method to fetch the data from "news_data.json" asynchronously.
+Update DOM with AJAX Data:
+Once the data is fetched successfully, loop through the news items and dynamically create HTML elements (e.g., <div>, <h3>, <p>, <a>) to display the news content.
+Append the created elements to the "news-feed" container.
+Add Interactivity with jQuery:
+Implement a click event handler using jQuery to handle the click on each news item. When a news item is clicked, toggle the visibility of its description. (Initially, the description should be hidden.)
+
+
+jQuery Effects:
+Add a smooth animation effect when toggling the visibility of the news item description. You can use methods like slideDown(), slideUp(), or slideToggle().
+Expected Output:
+Before clicking “Read more”
+Before clicking “Read more”
+After clicking “Read more”
+After clicking “Read more”
+Solution
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive News Feed</title>
+    <!-- Include jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="news-feed"></div>
+
+    <script >
+        $(document).ready(function() {
+    const $newsFeed = $("#news-feed");
+
+    // Fetch data using AJAX
+    $.ajax({
+        url: "news_data.json",
+        dataType: "json",
+        success: function(data) {
+            // Update DOM with AJAX Data
+            for (const item of data) {
+                const $newsItem = $("<div>").addClass("news-item");
+                const $title = $("<h3>").text(item.title);
+                const $description = $("<p>").text(item.description).hide();
+                const $link = $("<a>").attr("href", "#").text("Read More");
+
+                $newsItem.append($title, $description, $link);
+                $newsFeed.append($newsItem);
+            }
+
+            // Add Interactivity with jQuery
+            $(".news-item").on("click", function() {
+                const $description = $(this).find("p");
+                $description.slideToggle();
+            });
+        },
+        error: function() {
+            console.log("Error fetching data from the JSON file.");
+        }
+    });
+});
+    </script>
+
+</body>
+</html>
+ 

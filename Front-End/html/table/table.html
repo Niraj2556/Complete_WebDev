@@ -1,0 +1,91 @@
+Tables in HTML
+HTML tables can be used to present the bus schedules, including departure times, arrival times, and other details. Each row of the table represents a different bus trip, and each column represents a specific attribute, such as the bus number, origin, destination, departure time, and duration. 
+Attributes that can be applied include:
+<table>: Used to define a table in a web page. It serves as a container for other table-related elements such as <caption>, <thead>, <tbody>, and <tfoot>. It allows you to organize data into rows and columns.
+Example:
+<table>
+  <!-- Table content goes here -->
+</table>
+<caption>: Used to provide a caption or title for the table. It is typically placed inside the <table> element and appears above or below the table, depending on the styling.
+Example:
+<table>
+  <caption>This is a table caption</caption>
+  <!-- Table content goes here -->
+</table>
+<thead>: Used to group the header content of a table. It is usually placed inside the <table> element and contains one or more <tr> elements that define table rows.
+Example:
+<table>
+  <thead>
+    <!-- Table header content goes here -->
+  </thead>
+  <tbody>
+    <!-- Table body content goes here -->
+  </tbody>
+</table>
+<tr>: Used to define a table row. It is typically placed inside the <tbody>, <thead>, or <tfoot> element and contains one or more <td> or <th> elements that define table cells.
+Example:
+<table>
+  <tbody>
+    <tr>
+      <!-- Table body content goes here -->
+    </tr>
+  </tbody>
+</table>
+<th>: Used to define table header cells. It is similar to <td>, but it is specifically used for headers. It is typically placed inside <thead> and <tr> elements.
+Example:
+<table>
+  <thead>
+    <tr>
+      <th>Header 1</th>
+      <th>Header 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Table content goes here -->
+  </tbody>
+</table>
+scope: Used with <th> elements to specify whether a header is associated with a row (scope="row") or a column (scope="col"). It helps in providing semantic information about the header and improves accessibility for screen readers.
+Example:
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Column Header</th>
+      <th scope="row">Row Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Table content goes here -->
+  </tbody>
+</table>
+<tbody>: Used to group the body content of a table. It is typically placed inside the <table> element and contains one or more <tr> elements that define table rows.
+Example:
+<table>
+  <thead>
+    <!-- Table header content goes here -->
+  </thead>
+  <tbody>
+    <!-- Table body content goes here -->
+  </tbody>
+</table>
+<td>: Represents a table cell. It is used to define individual cells within a table row. It can contain text, images, links, or other HTML elements.
+Example:
+<table>
+  <tbody>
+    <tr>
+      <td>Cell 1</td>
+      <td>Cell 2</td>
+    </tr>
+  </tbody>
+</table>
+colspan & rowspan: Used with <td> and <th> elements to specify the number of columns or rows a cell should span. colspan is used to make a cell span multiple columns, and rowspan is used to make a cell span multiple rows.
+Example:
+<table>
+  <tr>
+    <td colspan="2">This cell spans two columns</td>
+    <td rowspan="2">This cell spans two rows</td>
+  </tr>
+  <tr>
+    <td>Cell 1</td>
+    <td>Cell 2</td>
+  </tr>
+</table>

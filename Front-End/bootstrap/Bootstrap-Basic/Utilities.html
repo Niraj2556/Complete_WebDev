@@ -1,0 +1,31 @@
+Utilities
+In Bootstrap, utility classes are a set of predefined classes that you can apply directly to HTML elements to add various styling and functionality quickly. These utility classes are designed to handle common tasks like spacing, alignment, visibility, and grid layout.
+Here's an overview of some commonly used utility classes in Bootstrap:
+Alignment Utilities: Bootstrap includes classes for aligning elements:
+.text-{alignment}: Sets the text alignment to left, center, right, or justify.
+.align-{alignment}: Aligns elements vertically within a container. Replace {alignment} with top, middle, bottom, baseline, or stretch.
+Example
+<div class="text-center">Centered text</div>
+<div class="align-items-center d-flex" style="height: 200px; border: 1px solid #ccc;">
+  <div class="align-self-start">Top-aligned item</div>
+  <div class="align-self-center">Middle-aligned item</div>
+  <div class="align-self-end">Bottom-aligned item</div>
+</div>
+Output:
+notion image
+Visibility Utilities: Bootstrap provides classes to control the visibility of elements:
+.visible-{breakpoint}: Makes an element visible at a specific breakpoint (xs, sm, md, lg, or xl).
+.invisible: Makes an element invisible but still takes up space.
+Example
+<div class="visible-md">Visible on medium screens</div>
+<div class="invisible">Invisible element</div>
+Output:
+notion image
+Gap Utilities: Bootstrap 5 introduced gap utilities for managing spacing between grid columns or flex items:
+.gap-{size}: Sets the gap between columns or flex items. Replace {size} with 0 to 5 (representing a scale of spacing).
+Example
+<div class="row gap-3">
+  <div class="col">Column 1</div>
+  <div class="col">Column 2</div>
+  <div class="col">Column 3</div>
+</div>

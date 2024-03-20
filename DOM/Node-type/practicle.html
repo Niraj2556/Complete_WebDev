@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Node Types Example</title>
+</head>
+<body>
+    <h1 id="title">Welcome to the Node Types Example</h1>
+    <p>This is a <strong>paragraph</strong> element.</p>
+    <!-- This is a comment node -->
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+    <script>
+      // Accessing element nodes
+const titleElement = document.getElementById("title");
+console.log(titleElement.tagName); // Outputs: H1
+console.log(titleElement.textContent); // Outputs: Welcome to the Node Types Example
+
+// Creating and manipulating text nodes
+const textNode = document.createTextNode("This is a dynamically created text node.");
+titleElement.appendChild(textNode);
+
+// Accessing comment nodes
+const commentNode = document.createComment("This is a dynamically created comment node.");
+titleElement.parentNode.insertBefore(commentNode, titleElement.nextSibling);
+
+// Manipulating attribute nodes
+titleElement.setAttribute("data-custom-attribute", "Custom Attribute Value");
+console.log(titleElement.getAttribute("data-custom-attribute")); // Outputs: Custom Attribute Value
+
+// Accessing document nodes
+console.log(document.nodeName); // Outputs: #document
+console.log(document.documentElement.nodeName); // Outputs: HTML
+
+// Accessing document type nodes
+console.log(document.doctype.nodeName); // Outputs: html
+console.log(document.doctype.publicId); // Outputs: null (depends on the actual doctype)
+
+// Accessing processing instruction nodes
+const processingInstructionNode = document.createProcessingInstruction("xml-stylesheet", 'href="styles.css" type="text/css"');
+document.insertBefore(processingInstructionNode, document.firstChild);
+
+// Additional operations on nodes
+const paragraphElement = document.querySelector("p");
+paragraphElement.innerHTML = "This paragraph element has been modified.";
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+<!-- Explanation:
+The top-level node is the Document node, representing the entire HTML document.
+
+The Document node has a child node, DocumentType, representing the HTML document type declaration (<!DOCTYPE html>).
+
+The Document node also has a child node, Element, representing the <html> element.
+
+Inside the <html> element, there is an Element representing the <head> element, which contains an Element representing the <title> element with the text "Node Types Example".
+
+The <html> element also contains an Element representing the <body> element.
+
+Inside the <body> element, there is an Element representing the <h1> element with the id "title". It has two child nodes: a Text node with the text "Welcome to the Node Types Example" and a dynamically created Text node with the text "This is a dynamically created text node.".
+
+After the <h1> element, there is a Comment node representing the comment "This is a comment node".
+
+The <body> element also contains an Element representing the <p> element, which contains an Element representing the <strong> element with the text "paragraph".
+
+Further, there is an Element representing the <ul> element, which contains two Element nodes representing the <li> elements with the texts "Item 1" and "Item 2".
+    
+At the end of the <body> element, there is a Text node with the modified text "This paragraph element has been modified.".
+Finally, the Document node has a ProcessingInstruction node representing the processing instruction xml-stylesheet href="styles.css" type="text/css". -->

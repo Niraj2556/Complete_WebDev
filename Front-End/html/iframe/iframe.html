@@ -1,0 +1,87 @@
+iframe in HTML
+
+An iframe (short for inline frame) is an HTML element used to embed or display content from another source within a web page. It allows you to include external documents such as web pages, images, videos, or interactive applications into your own HTML document. 
+Here's an example of how to use an iframe in HTML:
+<iframe src="https://www.example.com"></iframe>
+In the above example, the iframe is used to display the web page located at "https://www.example.com" within the current document.
+Here are some important attributes you can use with the iframe element:
+
+
+src: Specifies the URL of the content to be displayed within the iframe.
+Example:
+<iframe src="https://www.example.com"></iframe>
+
+height: Sets the height of the iframe in pixels or as a percentage of the parent container's height. 
+
+Pixels: When specifying the height in pixels, you provide a numerical value that represents the exact height of the iframe in pixels. For example:
+<iframe src="https://www.example.com" height="300"></iframe>
+
+Percentage: When using a percentage value, the height of the iframe is calculated relative to the height of its parent container. For example:
+<div style="height: 500px;">
+  <iframe src="https://www.example.com" height="50%"></iframe>
+</div>
+Here, the parent container <div> has a fixed height of 500 pixels. The iframe within it has a height of 50%, which means it will occupy half of the parent container's height (250 pixels in this case).
+Using a percentage for the iframe's height allows for more dynamic and responsive designs. As the parent container's height changes, the iframe will adjust proportionally.
+It's important to note that if the parent container's height is not explicitly defined or is set to auto, using a percentage for the iframe's height will not have any effect. In such cases, you may need to define a specific height for the parent container to make the percentage value applicable.
+
+
+width: Sets the width of the iframe in pixels or as a percentage of the parent container's width.
+Example:
+<iframe src="https://www.example.com" width="500"></iframe>
+
+
+frameborder: Specifies whether or not to display a border around the iframe. Accepts values "0" (no border) or "1" (border visible).
+Example:
+<iframe src="https://www.example.com" frameborder="1"></iframe>
+
+
+allowfullscreen: Indicates whether the iframe can be displayed in full-screen mode. Used for videos or interactive content. Accepts the value "true" or "false".
+Example:
+<iframe src="https://www.example.com" allowfullscreen></iframe>
+
+
+scrolling: Specifies whether or not to display scrollbars within the iframe. Accepts values "yes", "no", or "auto".
+scrolling="yes": This value indicates that scrollbars should always be displayed, regardless of the content size. Both vertical and horizontal scrollbars will be visible, allowing users to scroll through the iframe's content.
+scrolling="no": This value indicates that no scrollbars should be displayed, even if the content exceeds the available space. Users will not be able to scroll within the iframe, and the content will be clipped if it extends beyond the iframe's dimensions.
+
+
+crolling="auto": This value lets the browser decide whether to display scrollbars based on the content size. If the content exceeds the available space, the browser will automatically show scrollbars. If the content fits within the iframe, no scrollbars will be displayed.
+Example:
+<iframe src="https://www.example.com" scrolling="yes"></iframe>
+
+
+Note: The behavior of the scrolling attribute may vary across different browsers and platforms. In some cases, browsers may ignore the attribute and display scrollbars based on their own default settings. Additionally, modern web development practices often recommend handling scrollbars and scrolling behavior using CSS rather than relying solely on the scrolling attribute.
+
+
+
+
+
+
+
+sandbox: Provides a sandbox environment for the iframe's content, restricting access to certain features or APIs. The sandbox attribute accepts a space-separated list of values that define the permissions granted to the embedded content. Here are some commonly used values:
+
+
+allow-scripts: This value allows the embedded content to execute scripts. Without this value, JavaScript code within the iframe will not run.
+allow-forms: With this value, the embedded content can submit forms. It enables the use of form elements like <input> and <button> within the iframe.
+
+
+    allow-popups: This value permits the embedded content to open new windows or pop-up windows.
+allow-same-origin: When using this value, the embedded content is restricted to the same origin as the parent document. It means that the iframe can only interact with resources from the same domain, protocol, and port as the parent document.
+allow-top-navigation: This value allows the embedded content to navigate the top-level window. It enables the iframe to change the URL of the parent document.
+Example:
+<iframe src="https://www.example.com" sandbox="allow-scripts allow-forms"></iframe>
+In this example, the iframe's content is allowed to execute scripts and submit forms, but it is restricted from accessing other features like opening pop-ups or navigating the top-level window.
+The sandbox attribute is particularly useful when embedding content from untrusted sources or when you want to isolate the embedded content from the rest of your web page. It provides an additional layer of security by limiting the capabilities of the embedded content and reducing the potential risks associated with executing untrusted code.
+name: Specifies a name for the iframe, which can be used as a target for links or form submissions within the iframe.
+Example:
+<iframe src="https://www.example.com" name="myFrame"></iframe>
+
+
+loading: Specifies how the iframe content should be loaded. Accepts values "eager" (immediate loading), "lazy" (deferred loading), or "auto" (browser default).
+Example:
+<iframe src="https://www.example.com" loading="lazy"></iframe>
+
+
+title: Provides a title or description for the iframe, which can be used by screen readers or for accessibility purposes.
+Example:
+<iframe src="https://www.example.com" title="Example Website"></iframe>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Inline Styling Example</title>
+</head>
+<body>
+  <div id="myElement" style="color: red; font-size: 24px; background-color: yellow;">Hello, World!</div>
+
+  <script>
+    var elementById = document.getElementById("myElement");
+
+    // Changing inline styles
+    elementById.style.color = "blue";
+    elementById.style.fontSize = "18px";
+    elementById.style.backgroundColor = "green";
+
+    // Adding multiple inline styles
+    elementById.style.cssText = "color: purple; font-weight: bold; text-align: center;";
+
+    // Removing an inline style
+    elementById.style.removeProperty("background-color");
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Attribute Manipulation Example</title>
+</head>
+<body>
+  <div id="myElement">Hello, World!</div>
+
+  <script>
+    // setAttribute()
+    var element = document.getElementById("myElement");
+    element.setAttribute("class", "newClass");
+
+    // getAttribute()
+    var className = element.getAttribute("class");
+    console.log(className); // "newClass"
+
+    // removeAttribute()
+    element.removeAttribute("class");
+
+    // Check if attribute is removed
+    className = element.getAttribute("class");
+    console.log(className); // null
+  </script>
+</body>
+</html>
+
+
+
+
+<!-- The setAttribute() method sets the class attribute of the element with the ID "myElement" to "newClass".
+
+The getAttribute() method retrieves the value of the class attribute from the element with the ID "myElement" and assigns it to the className variable. In this case, it will be "newClass".
+
+The removeAttribute() method removes the class attribute from the element with the ID "myElement".
+After executing the code, you can check the value of the className variable to confirm that the attribute has been removed (it will be null in this case). -->

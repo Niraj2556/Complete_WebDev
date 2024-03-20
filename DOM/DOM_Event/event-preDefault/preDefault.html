@@ -1,0 +1,18 @@
+<!-- Event PreventDefault:
+By default, certain browser actions associated with events, such as clicking a link or submitting a form, trigger their default behavior. However, you can use the preventDefault() method on the event object to prevent the default behavior from occurring. This allows you to override default actions and implement custom functionality.
+The preventDefault() method is a feature of DOM events that allows you to prevent the default behavior associated with an event. It is used to override the default action triggered by an event and implement custom functionality instead.
+Here's a brief explanation of preventDefault():
+When certain events occur, such as clicking a link, submitting a form, or pressing certain keys, the browser performs a default action associated with that event.
+By calling the preventDefault() method within the event handler function, you can stop the default action from taking place.
+The preventDefault() method is available on the event object, which is automatically passed as an argument to the event handler function.
+When preventDefault() is invoked, it prevents the browser from performing the default behavior associated with the event.
+This allows you to implement your own custom behavior or perform additional actions in response to the event without the interference of the default action.
+For example, you can use preventDefault() to prevent a form from being submitted, to stop a link from navigating to its href URL, or to disable the default scrolling behavior when handling touch events.
+It's important to note that not all events have a default behavior, so calling preventDefault() on such events will have no effect.
+Also, keep in mind that preventing the default behavior of an event should be used thoughtfully, as it may alter the expected behavior of the user interface and could potentially lead to a poor user experience if misused.
+Example usage:
+document.querySelector('a').addEventListener('click', function(event) {
+  event.preventDefault(); // Prevents the default link navigation behavior
+  // Perform custom actions instead
+});
+By using preventDefault(), you have control over the default behavior of events and can customize the actions that occur when those events are triggered. This flexibility allows you to create interactive web applications with tailored user experiences. -->

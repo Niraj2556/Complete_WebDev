@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Working with Classes in the DOM</title>
+  <style>
+    .myClass {
+      color: red;
+    }
+    .newClass {
+      font-weight: bold;
+    }
+    .active {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div id="myElement" class="myClass">Hello, World!</div>
+
+  <script>
+    // Using classList
+    var element = document.getElementById("myElement");
+    element.classList.add("newClass");
+    element.classList.remove("myClass");
+    element.classList.toggle("active");
+
+    if (element.classList.contains("newClass")) {
+      console.log("Element has class 'newClass'");
+    }
+
+    // Using className
+    var className = element.className;
+    console.log("Class name:", className);
+
+    element.className = "anotherClass";
+    console.log("Updated class name:", element.className);
+
+    // Using setAttribute
+    element.setAttribute("class", "finalClass");
+
+    console.log("Class attribute:", element.getAttribute("class"));
+
+    element.setAttribute("class", element.getAttribute("class") + " extraClass");
+    console.log("Updated class attribute:", element.getAttribute("class"));
+  </script>
+</body>
+</html>
+
+
+
+<!-- The classList property is used to add, remove, toggle, and check classes on the element element. The methods add(), remove(), toggle(), and contains() are showcased.
+The className property is used to get the class name of the element element and set a new class name for the same element.
+The setAttribute() method is used to set the class attribute to "newClass" and "extraClass" for the element element.
+  -->

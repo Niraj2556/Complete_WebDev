@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Parallel Async, Throttling, and Debouncing Example</title>
+</head>
+<body>
+  <button id="parallelButton">Parallel Async</button>
+  <button id="throttleButton">Throttling</button>
+  <button id="debounceButton">Debouncing</button>
+
+  <script>
+    // Parallel Asynchronous Operations Example
+document.getElementById('parallelButton')
+  .addEventListener('click', async () => {
+  const urls = ['https://api.example.com/endpoint1', 'https://api.example.com/endpoint2', 'https://api.example.com/endpoint3'];
+
+  // Perform async requests in parallel
+  const responses = await Promise.all(urls.map(url => fetch(url)));
+  const data = await Promise.all(responses.map(response => response.json()));
+
+  console.log('Parallel Async:', data);
+});
+
+
+
+// Throttling Example
+document.getElementById('throttleButton')
+.addEventListener('click', throttle(() => {
+  console.log('Throttling: Button clicked');
+}, 1000));
+
+
+
+
+
+// Debouncing Example
+const debouncedFunction = debounce(() => {
+  console.log('Debouncing: Button clicked');
+}, 1000);
+document.getElementById('debounceButton')
+.addEventListener('click', debouncedFunction);
+
+
+
+// Helper function for throttling
+function throttle(func, delay) {
+  let timeoutId;
+  return function () {
+    if (!timeoutId) {
+      func.apply(this, arguments);
+      timeoutId = setTimeout(() => {
+        timeoutId = null;
+      }, delay);
+    }
+  };
+}
+
+// Helper function for debouncing
+function debounce(func, delay) {
+  let timeoutId;
+  return function () {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      func.apply(this, arguments);
+    }, delay);
+  };
+}
+
+  </script>
+</body>
+</html>

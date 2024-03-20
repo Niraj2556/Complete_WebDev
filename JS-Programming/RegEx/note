@@ -1,0 +1,79 @@
+Regular Expressions
+Regular expressions, often abbreviated as "regex" or "regexp," are powerful patterns used to match and manipulate text in strings. They provide a flexible and concise way to search, replace, and validate strings based on specific patterns. Regular expressions are supported in many programming languages, including JavaScript. They may look complicated and intimidating to new users.
+For example: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/ This is a type of Regular Expression for certain pattern matching.
+The terminology used in Regex:
+Pattern: The regular expression pattern is a sequence of characters that defines the search criteria. It specifies the text pattern you want to match in a string.
+String: The test string is the input text on which you apply the regular expression pattern. The pattern is matched against this string to find matches or perform manipulations.
+Digit: In regex, the term "digit" refers to any numeric digit from 0 to 9.
+Letter: The term "letter" in regex refers to any alphabetic character from a to z (lowercase) or A to Z (uppercase).
+Symbol: A "symbol" in regex represents any special character, punctuation, or other non-alphanumeric characters. It includes characters like ! $ % ^ & * ( ) _ + | ~ - = { } [ ] : ” ; ' < > ? , ` . /.
+Space: In regex, "space" refers to a single whitespace character, such as a space or a tab.
+Character: In regex, a "character" is a general term used to refer to any single letter, digit, or symbol.
+RegEx Basics
+To learn regex quickly with this guide, visit Regex101, where you can build regex patterns and test them against strings (text) that you supply.
+When you open the site, you’ll need to select the JavaScript flavor, as that’s what we’ll be using for this guide. (Regex syntax is mostly the same for all languages, but there are some minor differences.)
+regex input field: cat
+test string: rat bat cat sat fat cats eat tat cat mat CAT
+notion image
+Regular expressions in JavaScript start and end with /. If you were to write a regular expression in JavaScript code, it would look like this:
+const matchregex = /cat/;           //This is the regex for matching cat word
+There is one more way of creating Regex in JavaScript i.e. using RegExp() object. In this way there is no need to add slashes like in above example.
+const matchregex = new RegExp("cat");
+Global and Case-Insensitive RegEx Flags
+By default, a regex pattern will only return the first match it finds. If you’d like to return additional matches, you need to enable the global flag, denoted as g.
+Regex patterns are also case-sensitive by default. You can override this behavior by enabling the insensitive flag, denoted by i. The updated regex pattern is now fully expressed as /cat/gi. As you can see below, all “cat” strings have been matched including the one with a different case.
+notion image
+We need to add these flags in the end of regex defined. In JavaScript for both Global and Case Insensitive Search the regex pattern will look like:
+Character Sets
+In the previous example, we learned how to perform exact case-sensitive matches. What if we wanted to match “bat”, “cat”, and “fat”. We can do this by using character sets, denoted with [] . Basically, you put in multiple characters that you want to get matched. 
+For example: [bcf]at will match multiple strings as follows:
+notion image
+In JavaScript it will look like:
+const matchregex=/[bcf]at/ 
+//or
+const matchregex=new RegExp("[bcf]at")
+Ranges
+Let’s assume we want to match all words that end with at. We could supply the full alphabet inside the character set, but that would be tedious.
+The solution is to use ranges like this [a-z]at:
+notion image
+In JavaScript it will look like:
+const matchregex=/[a-z]at/
+// or 
+const matchregex=new RegExp("[a-z]at")
+Character Classes
+Character Classes allow you to write regular expression patterns that are even more compact.
+Let’s go through them one by one:
+\d matches any digit that is the same as [0-9]
+\D Matches any character that is not a digit (Arabic numeral). equivalent to  [^0-9]
+\w matches any letter, digit and underscore character
+\s matches a whitespace character — that is, a space or tab
+\t matches a tab character only
+From what we’ve learned so far, we can write regular expressions like this:
+\w{5} matches any five-letter word or a five-digit number
+\d{11} matches an 11-digit number such as a phone number
+Groups
+All the special characters we just mentioned only affect a single character or a range set. What if we wanted the effect to apply to a section of the expression? We can do this by creating groups using round brackets (). 
+For example: The pattern book(.com)? will match both “book” and “book.com”, since we’ve made the “.com” part optional.
+Here’s a more complex example that would be used in a realistic scenario such as email validation:
+Pattern: @\w+\.\w{2,3}(\.\w{2,3})?
+Test String: abc.com abc@mail @mail.com @mail.co.ke
+notion image
+Bracket Expressions
+Inside the bracket expressions, you can place any special characters you want to use to specify the character sets.
+For example: const regex = /[A-Z]/.
+Notice that A-Z is inside the square brackets so this will search for all uppercase letters in the alphabet.
+[a-z] matches a string that has all lowercase letters in the entire alphabet
+[A-Z] matches a string that has all the uppercase letters in the entire alphabet
+[abcd] matches a string that has a, b, c, d
+[a-d] exactly the same as the previous example so you can either specify each character or group them
+[a-gA-C0-7] matches string that has lowercase letters a-g, uppercase letters A-C, or numbers 0-7
+[^a-zA-Z] matches a string that DOES NOT have all lowercase or uppercase letters
+Inside a character set, the ^ character means all the characters that are NOT in the a-z or A-Z.
+ 
+Activity: True or False
+Regular expressions (regex) are patterns used to match character combinations in strings.
+JavaScript supports regular expressions (regex) natively.
+To make a regex pattern, only the forward slash notation (/pattern/) can be used in JavaScript.
+The match() method of a string object or the test() method of a regex object can be used to match a regex pattern against a string.
+To match every occurrence of a pattern in a string, the g flag with the RegExp() function Object() { [native code] } can be used in JavaScript.
+Solution

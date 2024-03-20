@@ -1,0 +1,10 @@
+Bootstrap provides a set of classes and styles for creating responsive and visually appealing tables. 
+Basic Table Structure: A basic table structure in Bootstrap consists of the <table> element, which contains one or more <tr> (table row) elements. Inside each row, you can include table data cells <td> or table header cells <th>. Table header cells are typically used to define column headers.
+Table Classes: Bootstrap offers various classes to style and enhance tables. Some commonly used classes include:
+.table: This class is applied to the <table> element to make it a Bootstrap table. It adds basic styling and formatting.
+.table-striped: This class adds zebra-striping to the table rows, alternating the background color of each row for improved readability.
+.table-bordered: This class adds borders to all the cells and the table itself.
+.table-hover: This class adds a hover effect to table rows, highlighting the row under the mouse pointer.
+.table-responsive: This class makes the table horizontally scrollable on small screens to prevent overflow.
+.table-group-divider: Add a thicker border, darker between table groups - <thead>, <tbody>, and <tfoot>.
+.table-light: Used to apply a light background color to a table.

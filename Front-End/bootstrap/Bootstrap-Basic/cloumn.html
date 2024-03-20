@@ -1,0 +1,55 @@
+In Bootstrap, columns are a fundamental part of the grid system and allow you to create responsive layouts. Columns are used to divide the horizontal space within a row and organize content into a grid-based structure.
+
+Here's an overview of how to use columns in Bootstrap:
+
+
+Container: Wrap your rows and columns in a container to provide a fixed-width layout. Use the class .container for a fixed-width container or .container-fluid for a full-width container. 
+
+
+Row: Inside the container, create a row using the class .row. Rows act as a horizontal grouping for columns and ensure proper alignment.
+Column Classes: Bootstrap provides a range of column classes that define the width and behavior of columns. The most commonly used classes are:
+
+.col: This class creates a column that automatically adjusts its width based on the available space. By default, it will occupy 100% of the row width on mobile devices and scale down on larger screens.
+
+.col-{breakpoint}-{columns}: Use these classes to create columns of specific widths at different breakpoints. For example, .col-sm-6 will create a column that occupies 50% of the row width on small screens and above.
+
+.col-{breakpoint}-auto: Use this class to create a column that automatically adjusts its width based on the content. For example, .col-lg-auto will create a column that takes up only the necessary width on large screens.
+
+
+Example
+In this example, we have created a container with a row containing two columns. On small screens and above, each column will occupy 50% of the row width.
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      Column 1
+    </div>
+    <div class="col-sm-6">
+      Column 2
+    </div>
+  </div>
+</div>
+Output:
+notion image
+Column Nesting: You can nest columns inside other columns to create more complex layouts. Simply add a new .row within an existing column and create new columns inside it.
+Example
+In this example, the second column is divided into two nested columns, each occupying 50% of the parent column's width.
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      Column 1
+    </div>
+    <div class="col-sm-6">
+      <div class="row">
+        <div class="col-6">
+          Nested Column 1
+        </div>
+        <div class="col-6">
+          Nested Column 2
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+Output:
+notion image
+Columns in Bootstrap provide a flexible way to create responsive layouts. By utilizing different column classes and nesting columns, you can achieve a variety of grid-based designs that adapt well to different screen sizes.

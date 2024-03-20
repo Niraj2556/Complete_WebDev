@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Handling with jQuery</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Event Handling with jQuery Example</h1>
+
+  <button id="btnToggle">Toggle Boxes</button>
+
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+
+  <script>
+    $(document).ready(function() {
+      // Toggle boxes on button click
+      $('#btnToggle').click(function() {
+        $('.box').toggle('slow');
+      });
+
+      // Change box color on mouse-enter and mouse-leave events
+
+      $('.box').mouseenter(function() {
+        $(this).css({ backgroundColor: 'green' }, 'fast');
+      }).mouseleave(function() {
+        $(this).css({ backgroundColor: 'black' }, 'fast');
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Event Handling with jQuery</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      margin: 10px;
+      transition: background-color 0.3s ease; /* CSS transition */
+    }
+  </style>
+</head>
+<body>
+  <h1>Event Handling with jQuery Example</h1>
+
+  <button id="btnToggle">Toggle Boxes</button>
+
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+
+  <script>
+    $(document).ready(function() {
+      // Toggle boxes on button click
+      $('#btnToggle').click(function() {
+        $('.box').toggle('slow');
+      });
+
+      // Change box color on mouse-enter and mouse-leave events
+      $('.box').mouseenter(function() {
+        $(this).css({ backgroundColor: 'black' });
+      }).mouseleave(function() {
+        $(this).css({ backgroundColor: 'red' });
+      });
+    });
+  </script>
+</body>
+</html> -->

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reserve Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar bg-body-secondary shadow">
+        <div class="container-fluid">
+          <div class="navbar-nav d-flex flex-row align-items-center">
+            <a class="navbar-brand fs-4 fw-medium" href="./index.html">
+              <img src="../assets/bus.png" alt="Bus" height="50" />
+              Reserve
+            </a>
+            <a class="nav-link p-2 disabled">Tickets</a>
+            <a class="nav-link p-2 active" href="./route.html">Bus Routes</a>
+            <a class="nav-link p-2" href="./contactus.html">Contact Us</a>
+          </div>
+
+          <div class="navbar-nav d-flex flex-row justify-content-end align-items-center">
+            <button type="button" class="btn btn-warning fw-bold">Login</button>
+            <button type="button" class="btn fw-bold">Register</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="py-5 col-6 offset-md-3 justify-content-center">
+      <h1 class="text-center text-danger pb-5">Bus Routes</h1>
+      <table class="table table-hover">
+        <thead class="table-light">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First Bus</th>
+            <th scope="col">Last Bus</th>
+            <th scope="col">Route</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          <tr>
+            <th scope="row">1</th>
+            <td>7:00 AM</td>
+            <td>10:00 PM</td>
+            <td>Mumbai - Chennai</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>9:30 AM</td>
+            <td>12:30 PM</td>
+            <td>Mumbai - Delhi</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>11:15 AM</td>
+            <td>11:45 PM</td>
+            <td>Mumbai - Bangalore</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>2:45 PM</td>
+            <td>4:30 PM</td>
+            <td>Chennai - Delhi</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>5:30 PM</td>
+            <td>7:00 PM</td>
+            <td>Chennai - Bangalore</td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td>8:00 PM</td>
+            <td>11:00 PM</td>
+            <td>Delhi - Bangalore</td>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td>9:45 PM</td>
+            <td>12:30 AM</td>
+            <td>Delhi - Mumbai</td>
+          </tr>
+          <tr>
+            <th scope="row">8</th>
+            <td>10:30 PM</td>
+            <td>1:00 AM</td>
+            <td>Bangalore - Mumbai</td>
+          </tr>
+          <tr>
+            <th scope="row">9</th>
+            <td>6:30 AM</td>
+            <td>8:30 PM</td>
+            <td>Chennai - Delhi</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <footer class="d-flex justify-content-between pt-3 bg-secondary align-content-between">
+      <p class="fw-bold ps-2">© 2023 AlmaBetter. All rights reserved</p>
+      <div class="d-flex">
+        <p class="fw-bold">Follow Us:</p>
+        <a href="https://www.facebook.com" class="px-2">
+          <img src="../assets/facebook.png" alt="Facebook" width="24px" /></a>
+        <a href="https://www.twitter.com" class="px-2">
+          <img src="../assets/twitter.png" alt="Twitter" width="24px" /></a>
+        <a href="https://www.instagram.com" class="px-2">
+          <img src="../assets/instagram.png" alt="Instagram" width="24px" /></a>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+
+</html>

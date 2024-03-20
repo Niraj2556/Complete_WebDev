@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reserve</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Added Tailwind CDN -->
+</head>
+
+<body>
+    <header class="w-full border-b-2 border-[rgba(201, 195, 195, 0.778)] columns-1">
+        <div>
+            <img src="./assets/bus.png" alt="bus" class="w-8 h-8" />
+            <div>RESERVE</div>
+        </div>
+        <nav>
+            <div>
+                <a href="" target="_blank" class="nav-elements">Tickets</a>
+                <a href="" target="_blank" class="nav-elements">Contact Us</a>
+            </div>
+            <div>
+                <a href="" class="rounded-md">Login</a>
+                <a href="" class="nav-elements">Register</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="mb-8">
+            <div class=" flex-col md:flex-row justify-between">
+                
+                <div class="mb-4 md:w-1/2 md:mr-4">
+                    <p>From:</p>
+                    <select name="Depart" class="border border-gray-300 rounded px-2 py-1">
+                        <option value="Delhi">Delhi</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Bengaluru">Bengaluru</option>
+                        <option value="Chennai">Chennai</option>
+                    </select>
+
+                </div>
+                <div class="mb-4 md:1/2 flex justify-end">
+                    <p>To:</p>
+                    <select name="arrive" class="border border-gray-300 rounded px-2 py-1">
+                        <option value="Delhi">Delhi</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Bengaluru">Bengaluru</option>
+                        <option value="Chennai">Chennai</option>
+                    </select>
+                </div>
+                <button type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded md:hidden">Search</button>
+            </div>
+            <button type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded hidden md:inline">Search</button>
+        </section>
+
+        <section class="w-full">
+            <h1 class="">Travel with world's largest bus services</h1>
+            <div class="columns-3">
+                <div class="h-60 border-2 border-gray-400">
+                    <img src="../images/_45d6ee06-4879-41c9-8295-e5d9cde2d9a3.jpg" alt="Bus" class="w-32 h-32 rounded-full m-auto" />
+                    <h3 class="">2000+</h3>
+                    <p class="">Bus Collection</p>
+                </div>
+                <div class="h-60  border-2 border-gray-400">
+                    <img src="../images/_85dfb894-2715-4e91-aa2b-ec0092487d78.jpg" alt="Family" class="w-32 h-32 rounded-full m-auto" />
+                    <h3 class="">2 Million+</h3>
+                    <p class="">Happy customers globally</p>
+                </div>
+                <div class="h-60  border-2 border-gray-400">
+                    <img src="../images/_a5d66e66-f606-4b3f-b50e-6a3a18ea6912.jpg" alt="Ticket" class="w-32 h-32 rounded-full m-auto" />
+                    <h3 class="">5000+</h3>
+                    <p class="">Tickets book everyday</p>
+                </div>
+            </div>
+        </section>
+        <section class="w-full columns-3">
+            <div class="border-2">
+                <div>
+                    <h3 class="bg-black text-white text-center">Vatsal Agarwal</h3>
+                    <h4>Customer since 2020</h4>
+                </div>
+                <p>4.9 &#9734;</p>
+                <p>Amazing travel experience with reserve. Excellent staff</p>
+            </div>
+            <div class="border-2">
+                <div>
+                    <h3 class="bg-black text-white text-center">Rohan Sharma</h3>
+                    <h4>Customer since 2022</h4>
+                </div>
+                <p>4.3 &#9734;</p>
+                <p>Amazing service. Always a best time with reserve.</p>
+            </div>
+            <div class="border-2">
+                <div>
+                    <h3 class="bg-black text-white text-center">Virat Kohli</h3>
+                    <h4>Customer since 2019</h4>
+                </div>
+                <p>4.5 &#9734;</p>
+                <p>Bus was clean and the journey was smooth. Reached on time.</p>
+            </div>
+        </section>
+    </main>
+    <!-- <footer class="w-full columns-2">
+        <p>&copy; 2023 AlmaBetter. All rights reserved</p>
+        <div class="">
+            <a href="https://www.facebook.com"><img src="../images/_45d6ee06-4879-41c9-8295-e5d9cde2d9a3.jpg" alt="Facebook" class="w-8 h-8"></a>
+            <a href="https://www.twitter.com"><img src="../images/_6ac64d32-174c-4f10-abf7-f1cb8fec558a.jpg" alt="Twitter" class="w-8 h-8"></a>
+            <a href="https://www.instagram.com"><img src="../images/_85dfb894-2715-4e91-aa2b-ec0092487d78.jpg" alt="Instagram" class="w-8 h-8"></a>
+        </div>
+    </footer> -->
+</body>
+
+</html>

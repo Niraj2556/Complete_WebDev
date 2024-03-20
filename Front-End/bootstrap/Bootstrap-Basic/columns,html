@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reserve Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar bg-body-secondary">
+        <div class="container-fluid">
+          <div class="navbar-nav d-flex flex-row align-items-center">
+            <a class="navbar-brand fs-4 fw-medium" href="./index.html">
+              <img src="../assets/bus.png" alt="Bus" height="50" />
+              Reserve
+            </a>
+            <a class="nav-link p-2 disabled">Tickets</a>
+            <a class="nav-link p-2" href="./route.html">Bus Routes</a>
+            <a class="nav-link p-2" href="./contactus.html">Contact Us</a>
+          </div>
+
+          <div class="navbar-nav d-flex flex-row justify-content-end align-items-center">
+            <button type="button" class="btn btn-warning fw-bold">Login</button>
+            <button type="button" class="btn fw-bold">Register</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="bg-info-subtle p-5">
+        <div class="navbar-nav d-flex justify-content-evenly flex-row align-items-center pt-5" style="padding-left: 25em; padding-right: 25em">
+          <select class="form-select m-3" aria-label="Default select example">
+            <option selected>Select Boarding City</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Bengaluru">Bengaluru</option>
+            <option value="Chennai">Chennai</option>
+          </select>
+
+          <select class="form-select m-3" aria-label="Default select example">
+            <option selected>Select Arrival City</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Bengaluru">Bengaluru</option>
+            <option value="Chennai">Chennai</option>
+          </select>
+        </div>
+        <div class="d-flex justify-content-evenly flex-row p-5">
+          <button type="submit" class="btn btn-outline-danger">Submit</button>
+        </div>
+      </section>
+      <section class="bg-light p-5">
+        <h1 class="text-center">Travel with world's largest bus services</h1>
+        <div class="d-flex justify-content-evenly p-5 text-center">
+          <div class="bg-white rounded-2 col-2">
+            <div class="-sm p-3">
+              <img src="../assets/bus-vector.png" alt="Bus" width="128px" class="mb-2" />
+            </div>
+            <div class="pt-4">
+              <h3>2000+</h3>
+              <p>Bus Collection</p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2 col-3">
+            <div class="-sm p-3">
+              <img src="../assets/family.png" alt="Family" width="128px" class="mb-2" />
+            </div>
+            <div class="pt-4">
+              <h3>2 Million+</h3>
+              <p>Happy customers globally</p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2 col-2">
+            <div class="-sm p-3">
+              <img src="../assets/ticket.png" alt="Ticket" width="128px" class="mb-2" />
+            </div>
+            <div class="pt-4">
+              <h3>5000+</h3>
+              <p>Tickets book everyday</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-dark-subtle p-5">
+        <h1 class="text-center">
+          Here's what a few of our customers have to say
+        </h1>
+        <div class="d-flex justify-content-evenly p-5 text-center">
+          <div class="bg-white rounded-2 col-3 d-flex flex-column">
+            <div class="d-flex flex-row justify-content-between mt-2">
+              <div class="col-2 bg-warning p-3 rounded-circle fw-bold ms-2">
+                VA
+              </div>
+              <div class="col-6 d-flex flex-column text-start ps-2">
+                <div class="fw-bold">Vatsal Agarwal</div>
+                <div>Customer since 2020</div>
+              </div>
+              <div class="col-3 pt-3 fw-bold text-danger">★ 4.9</div>
+            </div>
+            <div class="p-3 text-start">
+              Amazing travel experience with reserve. Excellent staff
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2 col-3 d-flex flex-column">
+            <div class="d-flex flex-row justify-content-between mt-2">
+              <div class="col-2 bg-warning p-3 rounded-circle fw-bold ms-2">
+                RS
+              </div>
+              <div class="col-6 d-flex flex-column text-start ps-2">
+                <div class="fw-bold">Rohan Sharma</div>
+                <div>Customer since 2022</div>
+              </div>
+              <div class="col-3 pt-3 fw-bold text-danger">★ 4.3</div>
+            </div>
+            <div class="p-3 text-start">
+              Amazing service. Always a best time with reserve.
+            </div>
+          </div>
+          <div class="bg-white rounded-2 col-3 d-flex flex-column">
+            <div class="d-flex flex-row justify-content-between mt-2">
+              <div class="col-2 bg-warning p-3 rounded-circle fw-bold ms-2">
+                VK
+              </div>
+              <div class="col-6 d-flex flex-column text-start ps-2">
+                <div class="fw-bold">Virat Kohli</div>
+                <div>Customer since 2019</div>
+              </div>
+              <div class="col-3 pt-3 fw-bold text-danger">★ 4.5</div>
+            </div>
+            <div class="p-3 text-start">
+              Bus was clean and the journey was smooth. Reached on time.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="d-flex justify-content-between pt-3 bg-secondary align-content-between">
+      <p class="fw-bold ps-2">© 2023 AlmaBetter. All rights reserved</p>
+      <div class="d-flex">
+        <p class="fw-bold">Follow Us:</p>
+        <a href="https://www.facebook.com" class="px-2">
+          <img src="../assets/facebook.png" alt="Facebook" width="24px" /></a>
+        <a href="https://www.twitter.com" class="px-2">
+          <img src="../assets/twitter.png" alt="Twitter" width="24px" /></a>
+        <a href="https://www.instagram.com" class="px-2">
+          <img src="../assets/instagram.png" alt="Instagram" width="24px" /></a>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+
+</html>

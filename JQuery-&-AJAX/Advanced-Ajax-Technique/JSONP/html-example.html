@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSONP Example</title>
+</head>
+<body>
+    <div id="data"></div>
+
+    <script>
+        // Define a callback function to process the JSONP response
+        function handleResponse(data) {
+            document.getElementById('data').innerText = JSON.stringify(data);
+        }
+
+        // Create a script element and set its source to the JSONP endpoint
+        const script = document.createElement('script');
+        script.src = 'https://api.example.com/data?callback=handleResponse';
+
+        // Append the script element to the document
+        document.head.appendChild(script);
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+What did we learn?
+
+Heap Sort is a comparison-based sorting algorithm that uses a binary heap data structure.
+
+Heap Sort has a time complexity of O(n log n) in all cases, making it efficient for large datasets. Heap Sort operates directly on the input array, resulting in a space complexity of O(1).
+
+Bucket Sort is a non-comparative sorting algorithm that divides the input into a fixed number of buckets. It distributes the elements into the buckets based on their values and applies another sorting algorithm within each bucket.
+
+Bucket Sort is useful when the input is uniformly distributed over a range.
+
+It has an average-case time complexity of O(n + k), where n is the number of elements and k is the number of buckets used. The space complexity of Bucket Sort is O(n + k), depending on the number of elements and the number of buckets.
+
+Radix Sort is a non-comparative sorting algorithm that sorts elements based on their digits or bits from the least significant to the most significant. It works by repeatedly sorting the elements based on each digit or bit position.
+
+Radix Sort has a time complexity of O(d * (n + k)), where d is the number of digits or bits, n is the number of elements, and k is the range of values for each digit or bit.
+
+The space complexity of Radix Sort is O(n + k), depending on the number of elements and the range of values.
+
+Counting Sort is a non-comparative sorting algorithm that determines the frequency of each distinct element in the input array. It creates a count array to store the occurrence of each element and uses this information to place elements in the correct order.
+
+Counting Sort has a time complexity of O(n + k), where n is the number of elements and k is the range of values.
+
+The space complexity of Counting Sort is O(n + k), depending on the number of elements and the range of values.
+
+
+
+
+
+Shortcomings & Challenges:
+
+Space Complexity: Some of these sorting algorithms, such as Bucket Sort and Counting Sort, may require additional memory to store 
+auxiliary data structures like buckets or count arrays. This can be a challenge when dealing with limited memory resources or sorting very large datasets.
+
+Data Distribution: The performance of these sorting algorithms can be sensitive to the distribution of the input data. Unevenly distributed or skewed data can lead to suboptimal performance and slower execution times.
+
+Non-Adaptive: These sorting algorithms do not adapt their runtime based on the input data. They have fixed time complexities and do not take advantage of pre-sorted or partially sorted input arrays. This can result in unnecessary comparisons and swaps, leading to inefficiencies in certain scenarios.

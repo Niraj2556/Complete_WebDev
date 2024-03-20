@@ -1,0 +1,41 @@
+% Interview Prep
+% Can every recursive function be expressed in a non-recursive form?
+% It is not always possible to write a non-recursive form for every recursive function. Some algorithms are inherently recursive and cannot be expressed in a non-recursive form. However, many recursive algorithms can be converted to non-recursive algorithms using techniques such as iteration or dynamic programming.
+ 
+% What is the difference between Backtracking and Recursion?
+% Backtracking is a specific type of recursion that involves trying out different solutions to a problem and undoing the solutions that do not work. Backtracking involves recursion, but not all recursion involves backtracking. Recursion is a more general technique that involves breaking down a problem into smaller sub-problems and solving each sub-problem using the same method. Backtracking is often used in problems where there are multiple possible solutions, and the goal is to find the best solution.
+ 
+% What distinguishes Dynamic Programming from Recursion and Memoization?
+% Dynamic programming is different from recursion and memoization in several ways.
+% Recursion involves breaking a problem down into smaller sub-problems and solving each sub-problem using the same method. Dynamic programming also breaks a problem down into sub-problems, but it stores the solutions to these sub-problems in memory to avoid redundant computation. This can make dynamic programming more efficient than recursion.
+% Memoization is a technique that can be used to optimize recursive functions by storing the results of expensive function calls and returning the cached result when the same inputs occur again. This can improve the performance of recursive functions, but it does not break the problem down into smaller sub-problems like dynamic programming does.
+ 
+% What is the space complexity of the following recursive function, and why?
+% function factorial(n) {
+%   if (n === 0) {
+%     return 1;
+%   }
+%   return n * factorial(n - 1);
+% }
+% The space complexity of the above function is linear (O(n)) because n recursive calls are made, each requiring a new stack frame to be created.
+ 
+% How do you determine the space complexity of a recursive algorithm, and why is it important to consider?
+% Space complexity involves evaluating the amount of memory a recursive algorithm takes up as a function of the input size. It is important to consider because if an algorithm uses too much memory, it may crash or slow down significantly. The space complexity of a recursive algorithm can be determined by looking at the maximum amount of space used on the call stack.
+ 
+% Can you explain the advantages of using binary search over linear search, and under what circumstances would binary search be more efficient?
+% Binary search is an efficient search algorithm that works well for sorted arrays. It quickly narrows down the search space by repeatedly dividing it in half. This leads to a fast average and worst-case time complexity of O(log n), making it ideal for large datasets. On the other hand, linear search checks each element one by one, resulting in a linear time complexity of O(n). Binary search's efficiency shines when dealing with sizable data and scenarios where searches are repeated, while linear search is simpler and suitable for smaller datasets or unsorted data.
+ 
+% How does the performance of linear search compare to binary search as the size of the input array increases in JavaScript?
+% The performance of linear search grows linearly with the size of the input array, resulting in a proportional increase in search time. In contrast, binary search's performance grows logarithmically with array size, leading to slower growth in search time as the array becomes larger. This makes binary search significantly more efficient for large datasets compared to linear search in JavaScript.
+ 
+% When collisions occur in a hashmap, what are two common collision resolution strategies, and what differentiates them?
+% Two common collision resolution strategies are Separate Chaining and Open Addressing.
+% Separate Chaining uses linked lists or other data structures within the same bucket to handle collisions. Colliding elements are appended to the same bucket's chain.
+% Open Addressing stores colliding elements directly in the buckets. It probes for the next available slot, using methods like linear probing, quadratic probing, or double hashing.
+% The choice between these strategies depends on factors like memory usage, lookup efficiency, and implementation complexity.
+ 
+% What is the load factor in a hashmap, and how does it impact the performance of the hashmap?
+% The load factor in a hashmap measures how full the hashmap is and is calculated as the ratio of the number of elements stored to the total number of slots. A higher load factor indicates a more crowded hashmap. This impacts performance as higher load factors lead to more collisions, causing longer lookup times. To maintain efficiency, it's important to keep the load factor within a certain range (e.g., around 0.7 or 0.8). When the load factor exceeds this threshold, the hashmap is resized, a process known as rehashing, to balance memory usage and efficient lookup times.
+ 
+% How do you determine the optimal searching algorithm for a given problem?
+% Determining the optimal searching algorithm involves considering factors like data size, search frequency, data structure, and constraints. Conducting time and space complexity analysis helps compare algorithm performance. Choose an algorithm that balances these factors and offers the best tradeoff between time and space complexity for the specific problem.

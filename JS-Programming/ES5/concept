@@ -1,0 +1,10 @@
+JavaScript ES5 (ECMAScript 5) is the fifth edition of the ECMAScript standard, released in December 2009. It introduced several important features and concepts that were widely used before newer versions of JavaScript (ES6 and beyond) were introduced.
+
+
+Here are some key concepts introduced in ES5:
+
+“use strict”
+Multiline strings
+String trim()
+JSON.parse() and JSON.stringify()
+Getters and Setters

@@ -1,0 +1,58 @@
+Forms in HTML
+
+
+
+HTML forms are an essential part of web development as they allow users to input and submit data. HTML provides a set of elements and attributes to create forms. Here's a detailed explanation of HTML forms and their components:
+<form> element: The <form> element is used to create a form. It acts as a container for various form controls. It has two important attributes:
+
+
+action: Specify the URL or endpoint where the form data should be sent upon submission.
+
+method: Specify the HTTP method to be used when submitting the form, either "get" or "post.”
+Here's an example of how the <form> tag is used:
+<form action="/submit_form" method="post">
+  <!-- form controls go here -->
+</form>
+In the upcoming sections of this course, we will explore this type in more detail.
+Form controls: Form controls are elements that allow users to input and select data. Here are some commonly used form controls:
+<input>: Creates an input field for various types of data, such as text, email, password, checkboxes, radio buttons, etc.
+
+
+Name: The name field allows users to input their names. It is typically a single-line text input (<input type="text">).
+
+Email: The email field is used for collecting email addresses. It ensures that the entered value follows a valid email format (<input type="email">).
+
+Mobile: The mobile field is used to collect users' phone numbers. It can accept numeric input and may include additional validation or formatting requirements (<input type="tel">).
+
+Radio Button: Radio buttons are used when users need to choose one option from a list. They provide a set of mutually exclusive options, and only one option can be selected at a time (<input type="radio">).
+
+Checkbox: Checkboxes allow users to select one or more options from a set of choices. Each checkbox is independent of the others, and multiple options can be selected simultaneously (<input type="checkbox">).
+
+Text area: The text area allows users to input multiple lines of text. It is useful for collecting longer messages, comments, or descriptions (<textarea></textarea>).
+
+File Upload: The file upload field enables users to select and upload files from their local device to the server. It typically displays a "Browse" or "Choose File" button (<input type="file">).
+
+Submit Button: The submit button triggers the form submission process. When clicked, it sends the form data to the server for processing (<input type="submit"> or <button type="submit"></button>).
+
+
+Here's an example of how different <form> elements are used:
+<input type="text" name="username" id="username">
+<textarea name="message" id="message" rows="4"></textarea>
+<button type="submit">Submit</button>
+
+Important attributes of Form control:
+name attribute: The name attribute is used to identify form controls when the form is submitted. It serves as the key for the corresponding input value.
+Example:
+<input type="text" name="username">
+
+
+label element: The <label> element provides a text label for form controls. It improves accessibility and usability by associating the label with its corresponding control.
+Example:
+<label for="username">Username:</label>
+<input type="text" name="username" id="username">
+
+
+required attribute: The required attribute makes a form control mandatory, ensuring the user provides a value before submitting the form.
+Example:
+<input type="text" name="username" required>
+These are the fundamental components of HTML forms. You can enhance forms by implementing form validation, styling, and utilizing JavaScript for client-side interactivity.

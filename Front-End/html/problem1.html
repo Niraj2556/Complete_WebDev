@@ -1,0 +1,111 @@
+<!-- Task: Create a Webpage with Advanced HTML Elements
+Create an HTML document structure with the necessary tags including <html>, <head>, and <body>.
+
+    Inside the <head> tag, add a title for your webpage.
+
+        Within the <body> tag, create a header using the <header> tag and add a suitable heading for your webpage.
+
+            Create a form using the <form> tag.
+
+                Include appropriate form elements such as text input, radio buttons, checkboxes, and a submit button.
+
+                Add proper labels for each form element.
+
+                Apply necessary attributes like name, id, and value to the form elements.
+
+                Below the Form, Create an ordered list (<ol>) with at least five list items (<li>).
+
+                    Create an unordered list (<ul>) with at least three list items (<li>).
+
+                        Build a table with the following details:
+
+                        Include a table header using the <th> tag.
+
+                            Create a table row (<tr>) with at least three columns (<td>) in each row.
+
+                                Populate the table with relevant information.
+
+                                At last, create an <iframe> element.
+
+                                    Set the src attribute to the www.almabetter.com website.
+
+                                    Adjust the width and height attributes to display the iframe appropriately. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced HTML Elements</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Advanced HTML Elements</h1>
+    </header>
+
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" value="" /><br />
+
+      <label for="gender">Gender:</label>
+      <input type="radio" id="male" name="gender" value="male" />
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">Female</label><br />
+
+      <label for="hobby">Hobbies:</label>
+      <input type="checkbox" id="reading" name="hobby" value="reading" />
+      <label for="reading">Reading</label>
+      <input type="checkbox" id="traveling" name="hobby" value="traveling" />
+      <label for="traveling">Traveling</label><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+
+    <h2>Ordered List</h2>
+    <ol>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+    </ol>
+
+    <h2>Unordered List</h2>
+    <ul>
+      <li>Item A</li>
+      <li>Item B</li>
+      <li>Item C</li>
+    </ul>
+
+    <h2>Table</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>City</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John Doe</td>
+          <td>25</td>
+          <td>New York</td>
+        </tr>
+        <tr>
+          <td>Jane Smith</td>
+          <td>30</td>
+          <td>London</td>
+        </tr>
+        <tr>
+          <td>Michael Johnson</td>
+          <td>35</td>
+          <td>Paris</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Iframe</h2>
+    <iframe src="https://www.almabetter.com" width="100%" height="500"></iframe>
+  </body>
+</html>

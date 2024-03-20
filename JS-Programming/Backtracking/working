@@ -1,0 +1,22 @@
+<!-- Working of Backtracking Algorithm
+In JavaScript, backtracking is often used in search algorithms, puzzles, and games. Backtracking is a recursive algorithm that tries various paths until it finds a solution.
+
+In backtracking, a program starts with a solution and then tries to find better solutions by incrementally changing it. If a better solution is not found, the program backtracks and tries a different path. The algorithm continues to backtrack until all possible solutions have been tried.
+
+Here's a step-by-step explanation of how the backtracking algorithm works:
+
+
+Choose: Start by choosing the initial configuration or a partial solution.
+
+Explore: Proceed to explore the next possible move or extension of the current partial solution. Generate all valid options that can be appended 
+to the current configuration.
+
+Constraints: Verify if the current partial solution satisfies all the problem constraints. If the constraints are violated, backtrack to the previous step and try a different option.
+
+
+Goal: Check if the current partial solution satisfies the goal or objective of the problem. If the goal is met, a valid solution is found.
+
+Backtrack: If the constraints are met, but the goal is not yet reached, recursively backtrack to the previous step and undo the last move or 
+
+extension. This allows the algorithm to explore alternative paths and try different combinations.
+Repeat or Conclude: Repeat steps 2-5 until all possibilities have been explored or a valid solution is found. If no solution is found, it concludes that there is no valid solution for the problem. -->

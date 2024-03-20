@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<script>
+    function generatePattern(n) {
+    if (n < 2) {
+        console.log("Please provide n >= 2");
+        return;
+    }
+
+    for (let i = 0; i < n; i++) {
+        let spaces = i;
+        let stars = n - i;
+        let row = "";
+
+        for (let j = 0; j < spaces; j++) {
+            row += ' ';
+        }
+
+        for (let k = 0; k < stars; k++) {
+            row += (k === stars - 1 || i === 0 || i === n - 1) ? '@' : '*';
+        }
+
+        console.log(row);
+    }
+}
+
+// Example: n = 2
+generatePattern(2);
+
+console.log();
+
+// Example: n = 3
+generatePattern(3);
+
+</script>
+<body>
+    
+</body>
+</html>

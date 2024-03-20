@@ -1,0 +1,33 @@
+<!-- Event Object:
+When an event occurs, an event object is created, providing information about the event and its properties. The event object contains details such as the event type, target element, mouse coordinates, key codes, form input values, and more. You can access this object within your event handler function and use its properties to perform specific actions based on the event details.
+The Event Object in DOM events is an object that provides information and properties related to an event that occurs in the browser. It serves as a central source of information for event handlers to access details about the event and perform specific actions based on that information. Here's a brief explanation of the Event Object:
+
+Event Properties: The Event Object contains various properties that provide details about the event. Common properties include:
+
+type: Specifies the type of event that occurred (e.g., "click", "keydown", "submit").
+
+target: References the element on which the event was originally triggered.
+
+currentTarget: Refers to the element to which the event handler is attached (can be different from the target if 
+event delegation is used).
+
+eventPhase: Indicates the current phase of event propagation ("capturing", "at target", or "bubbling").
+
+timeStamp: Represents the timestamp when the event occurred.
+keyCode or key: Provides information about the key or keyboard button associated with the event (applicable to keyboard events).
+
+clientX and clientY: Provide the mouse coordinates relative to the viewport (applicable to mouse events).
+
+preventDefault(): A method to prevent the default behavior associated with the event.
+Accessing the Event Object: Within an event handler function, the Event Object can be accessed as a parameter. For example: -->
+element.addEventListener('click', function(event) {
+  // Access event properties and perform actions
+  console.log(event.type);
+  console.log(event.target);
+});
+<!-- Event Propagation and Stopping Propagation: The Event Object allows you to control event propagation through methods such as stopPropagation(), which stops the event from further propagating up or down the DOM tree, and stopImmediatePropagation(), which stops propagation and prevents any additional event handlers on the same element from being called.
+
+Preventing Default Behavior: The Event Object's preventDefault() method can be used to prevent the browser's default behavior associated with an event. For example, calling event.preventDefault() within a click event handler prevents a link from navigating to its default URL.
+
+Custom Data: You can also attach custom data to the Event Object by using the event.detail property. This allows you to pass additional information from one event listener to another.
+Understanding and utilizing the Event Object provides you with access to valuable information about events occurring in the browser. By leveraging the Event Object's properties and methods, you can create custom behavior, control event flow, and enhance the interactivity and functionality of your web applications. -->

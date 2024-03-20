@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Handling Example</title>
+  <style>
+    .container {
+      margin: 50px auto;
+      width: 200px;
+      text-align: center;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: coral;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box" id="box1">Box 1</div>
+    <div class="box" id="box2">Box 2</div>
+    <div class="box" id="box3">Box 3</div>
+  </div>
+
+  <script>
+    // Event handler functions
+    function handleClick(event) {
+      console.log("Clicked:", event.target.textContent);
+    }
+
+    function handleMouseEnter(event) {
+      console.log("Mouse entered:", event.target.textContent);
+    }
+
+    function handleMouseLeave(event) {
+      console.log("Mouse left:", event.target.textContent);
+    }
+
+    // Attach event listeners
+    const boxes = document.querySelectorAll('.box');
+    boxes.forEach(box => {
+      box.addEventListener('click', handleClick);
+      box.addEventListener('mouseenter', handleMouseEnter);
+      box.addEventListener('mouseleave', handleMouseLeave);
+    });
+
+    
+    // Event propagation example
+    const container = document.querySelector('.container');
+    container.addEventListener('click', event => {
+      console.log("Container clicked");
+    });
+
+  </script>
+</body>
+</html>

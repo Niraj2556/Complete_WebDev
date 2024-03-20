@@ -1,0 +1,24 @@
+To edit attributes in the DOM (Document Object Model), you can use the setAttribute(), getAttribute(), and removeAttribute() methods. These methods allow you to modify, retrieve, and remove attributes of HTML elements. Here's how you can use them:
+
+
+setAttribute()
+The setAttribute() method in JavaScript is used to add or modify an attribute of an HTML element. It allows you to set the value of a specified attribute on an element dynamically.
+The syntax for using setAttribute() is as follows:
+<!-- element.setAttribute(attributeName, attributeValue); -->
+
+
+element: The HTML element to which the attribute will be added or modified.
+attributeName: The name of the attribute to be set.
+attributeValue: The value to be assigned to the attribute.
+Here's an example that demonstrates the usage of setAttribute():
+<!-- <button id="myButton">Click me</button> -->
+
+<!-- var button = document.getElementById('myButton');
+button.setAttribute('disabled', 'true'); -->
+In the above example, the setAttribute() method is used to set the disabled attribute of the button element to 'true'. This effectively disables the button, making it unclickable.
+
+If the specified attribute already exists on the element, setAttribute() will update its value. If the attribute doesn't exist, setAttribute() will create a new attribute with the specified name and value.
+
+It's important to note that when using setAttribute(), the attribute value is treated as a string. If you need to set a boolean attribute, such as disabled or checked, you should pass the string 'true' or 'false' as the attribute value.
+
+Overall, setAttribute() provides a convenient way to modify attributes of HTML elements using JavaScript dynamically. It allows for flexible manipulation of element properties, enabling you to adapt the behavior and appearance of elements based on application logic or user interactions.
