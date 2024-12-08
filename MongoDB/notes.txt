@@ -1,0 +1,23 @@
+A non-relational database, often known as NoSQL, stores data differently from traditional SQL databases, offering flexibility to manage varied data structures.
+
+Non-relational databases improve performance, support unstructured data, ensure high availability, scale horizontally, enable real-time data processing, offer cost savings, and adapt to diverse use cases, thanks to their various types.
+
+Introduction to BSON (Binary JSON), a binary-encoded format MongoDB uses to store data. Understanding its relationship to JSON (JavaScript Object Notation).
+
+Creating Documents using the insertOne() and insertMany() methods. Reading Documents using the find() method and its variations like toArray().
+
+Updating Documents using the updateOne() and updateMany() methods. Deleting Documents using the deleteOne() and deleteMany() methods.
+
+Using Multiple Conditions with logical operators like $and, $or, $nor, etc.
+
+Querying Array Fields using operators like $in, $nin, $all, etc. Querying Nested Documents using dot notation for accessing fields in nested documents.
+
+In MongoDB, pagination can be achieved using the skip() and limit() methods. skip() is used to skip a specified number of documents, and limit() restricts the number of documents returned.
+
+$match  is used to filter documents based on specified criteria. $groupis used to group documents by a specified key and applies accumulator expressions to compute aggregated results.
+
+$project is used to reshape documents, includes or excludes fields, and creates computed fields. $sort is used to sort the output documents based on specified fields.
+
+$skip is used to skip a specified number of documents from the beginning of the result set.$limit is used to limit the number of documents in the output.
+
+$unwind is used to deconstruct an array field from the input documents and outputs one document for each element.

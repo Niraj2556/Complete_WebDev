@@ -1,0 +1,29 @@
+How can you boost the performance of MongoDB Aggregation Pipelines?
+
+To enhance the performance of MongoDB Aggregation Pipelines, you can:
+
+Properly index fields used in $match and $sort stages.
+
+Limit the data processed using $match early in the pipeline.
+
+Use the $project stage to eliminate unnecessary fields early.
+
+Avoid using $out unless necessary, as it forces materialization.
+
+Consider sharding and replication strategies based on workload.
+
+
+
+
+What are the limitations of MongoDB Aggregation Pipelines?
+
+MongoDB Aggregation Pipelines have some limitations, including:
+
+o Limited support for recursive queries.
+
+o Lack of support for joins between collections (use $lookup for limited join functionality).
+
+o Limited textual search capabilities compared to dedicated search engines.
+
+o Aggregation operations are not as flexible as custom JavaScript functions.
+ 

@@ -1,0 +1,8 @@
+Explain MongoDB's comparison operators.
+Comparison operators in MongoDB allow you to compare values in queries. Some common comparison operators include:
+$eq: Matches values that are equal.
+$ne: Matches values that are not equal.
+$gt: Matches values that are greater than.
+$lt: Matches values that are less than.
+$gte: Matches values that are greater than or equal to.
+$lte: Matches values that are less than or equal to.
